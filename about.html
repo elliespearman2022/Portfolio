@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="UTF-8">
+<title>Ellie's Portfolio</title>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+<!-- Google Fonts Embed (barlow): -->
+<link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+	
+	<!--links to the jQuery library:-->
+<script src="js/jquery-3.4.1.js"></script>
+
+<!--Link to Masonry Scripts (to make the vertical caps in grid dissapear) :-->
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+
+
+</head>
+
+<body>
+	
+
+<section class="layout cf">
+
+
+<nav>
+<h1><a href="index.html">E</a></h1>
+<span class="name">Ellie Spearman</span>
+<ul>
+<li><a href="portfolio.html">portfolio</a></li>
+</ul>
+</nav>
+	
+	
+<div class="content cf">
+<h2>I'm<br>Ellie</h2>
+	
+<div class="about-img-box">
+  <img src="images/me.jpg" width="400" height="400" alt=""/> </div>
+	
+  <div class="about-txt-box">
+		<p>Hi :) My name is Ellie Spearman, and I am an upcoming graphic designer living on the west side of Chicago. I have a 6 year, and counting streak of graphic art skills and experience under my belt. My passion for visual communications emerged when I was 13 years old and has only continued to thrive since. I am deeply educated on the entire Adobe Cloud platform. Along side my work in graphic design, I am also a well rounded musician, song writier, and scholar athlete graduate. Currently, I am an Undergraduate Student at the University of Chicago Illinois on a four year track to attain my Bachlors degree in Graphic Design. I do some freelance work on the side as well. My work various from logo designs for upcoming businesses and organizations, to photoshoots/album cover designs for upcoming artists.<br>
+
+<br>If you like what you see, feel free to contact me via either my business or personal E-mail!</p>
+  </div>
+
+	  <div class="contact-txt-box">
+		<p>Contact</p>
+  </div>
+	
+  <div class="contact-info-box">
+		<p>Business E-mail: elliespearman@icould.com<br>Personal E-mail: EellieRrenee@gmail.com<br><br>Instagram: @g.ravity_19</p>
+  </div>
+	
+</div>	
+	
+
+	
+	
+</div><!-- end ggmain -->
+	
+</section><!-- end of layout section -->
+
+
+
+
+<!--The Masonry JavaScript plugin is necessary here. I can explain why during class-->
+
+<script>
+
+var elements = document.getElementsByClassName('grid');
+var msnry;
+
+imagesLoaded( document.querySelector('.grid'), function() {
+  var n = elements.length;
+  for(var i = 0; i < n; i++){
+    msnry = new Masonry( elements[i], {
+      itemSelector: '.grid-box',
+      columnWidth: '.unit-sizer',
+      gutter: '.gutter-sizer',
+      percentPosition: false,
+    });
+  }
+});
+
+</script>
+
+
+<script type="text/javascript">
+	$("[data-fancybox]").fancybox({
+		protect: false,
+		transitionDuration : 3000,
+		wheel : false,
+		toolbar : true,
+		buttons : [
+        //'slideShow',
+        //'fullScreen',
+        //'thumbs',
+        //'share',
+        //'download',
+        //'zoom',
+        'close'
+    ],
+	});
+</script>
+</body>
+</html>

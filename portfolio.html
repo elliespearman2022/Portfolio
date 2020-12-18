@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Ellie's Portfolio</title>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+<!-- Google Fonts Embed (barlow): -->
+<link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+<!--links to the jQuery library:-->
+<script src="js/jquery-3.4.1.js"></script>
+
+<!--Link to Masonry Scripts (to make the vertical caps in grid dissapear) :-->
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+
+
+</head>
+
+
+<body>
+
+<section class="layout cf">
+
+
+<nav>
+<h1><a href="index.html">E</a></h1>
+<span class="name">Ellie Spearman</span>
+<ul>
+
+<li><a href="about.html">about</a></li>
+</ul>
+</nav>
+
+
+
+
+
+<div class="content cf">
+
+
+<h2>Year<br>One</h2>
+
+<div class="grid cf">
+<div class="unit-sizer"></div>
+<div class="gutter-sizer"></div>
+
+<div class="grid-box">
+<a href="2d-form.html">
+<img src="images/type1portimg.jpg">
+<span class="title">2D FORM</span>
+</a>
+</div>
+
+<div class="grid-box">
+<a href="photo.html">
+<img src="images/ph_port.jpg">
+<span class="title">PHOTOGRAPHY</span>
+</a>
+</div>
+
+<div class="grid-box">
+<a href="digital-media-1.html">
+<img src="images/digital_media_1_portfolio.jpg">
+<span class="title">DIGITAL MEDIA 1</span>
+</a>
+</div>
+
+
+<div class="grid-box">
+<a href="color-theroy.html">
+<img src="images/colorportimg.jpg">
+<span class="title">COLOR THEORY</span>
+</a>
+</div>
+
+</div><!-- end of grid container -->
+
+
+
+
+
+
+<div class="portfolio-section cf">
+<h2>Year<br>Two</h2>
+
+<div class="grid cf">
+<div class="unit-sizer"></div>
+<div class="gutter-sizer"></div>
+
+
+<div class="grid-box">
+<a href="typography.html">
+<img src="images/typeportimg.jpg">
+<span class="title">TYPOGRAPHY</span>
+</a>
+</div>
+
+<div class="grid-box">
+<a href="studio-form-image.html">
+<img src="images/ifs_portfolio.jpg">
+<span class="title">IFS</span>
+</a>
+</div>
+
+<div class="grid-box">
+<a href="digital-media-2.html">
+<img src="images/dm2portimg.jpg">
+<span class="title">DIGITAL MEDIA 2</span>
+</a>
+</div>
+
+
+<div class="grid-box">
+<a href="typography2.html">
+<img src="images/type2portimg.jpg">
+<span class="title">TYPOGRAPHY2</span>
+</a>
+</div>
+
+</div><!-- end of grid container -->
+</div><!-- end of project section -->
+	
+	
+	<div class="portfolio-section cf">
+<h2>Year<br>Three</h2>
+
+<div class="grid cf">
+<div class="unit-sizer"></div>
+<div class="gutter-sizer"></div>
+
+
+<div class="grid-box">
+<a href="typography3.html">
+<img src="images/type3portimg.jpg">
+<span class="title">TYPOGRAPHY3</span>
+</a>
+</div>
+
+<div class="grid-box">
+<a href="https://elliespearman2022.github.io/DES350/index">
+<img src="images/dm4portimg.jpg">
+<span class="title">DIGITAL MEDIA 4</span>
+</a>
+</div>
+
+	
+
+</div><!-- end of grid container -->
+</div><!-- end of project section -->
+	
+	
+
+<div class="portfolio-section cf">
+<h2>other</h2>
+
+<div class="grid cf">
+<div class="unit-sizer"></div>
+<div class="gutter-sizer"></div>
+
+<div class="grid-box">
+<a href="edits.html">
+<img src="images/editsportimg.jpg">
+<span class="title">EDITS/DRAWINGS</span>
+</a>
+</div>
+	
+<div class="grid-box">
+<a href="photography.html">
+<img src="images/solophoto.jpg">
+<span class="title">PHOTO</span>
+</a>
+</div>
+
+<div class="grid-box">
+<a href="comissions.html">
+<img src="images/comission_port.jpg">
+<span class="title">COMISSIONS</span>
+</a>
+</div>
+	
+	
+</div><!-- end of grid container -->
+</div><!-- end of project section -->	
+	
+</div><!-- end ggmain -->
+	
+</section><!-- end of layout section -->
+
+
+
+
+<!--The Masonry JavaScript plugin is necessary here. I can explain why during class-->
+
+<script>
+
+var elements = document.getElementsByClassName('grid');
+var msnry;
+
+imagesLoaded( document.querySelector('.grid'), function() {
+  var n = elements.length;
+  for(var i = 0; i < n; i++){
+    msnry = new Masonry( elements[i], {
+      itemSelector: '.grid-box',
+      columnWidth: '.unit-sizer',
+      gutter: '.gutter-sizer',
+      percentPosition: false,
+    });
+  }
+});
+
+</script>
+
+
+</body>
+
+
+</html>

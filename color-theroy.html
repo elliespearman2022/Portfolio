@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Ellie's Portfolio</title>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+
+<!-- Google Fonts Embed (barlow): -->
+<link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+<!--links to the jQuery library:-->
+<script src="js/jquery-3.4.1.js"></script>
+
+<!--Link to Masonry Scripts (to make the vertical caps in grid dissapear) :-->
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+
+<script src="js/jquery.fancybox.min.js"></script>  
+
+</head>
+
+
+<body>
+
+<section class="layout cf">
+
+
+<nav>
+<h1><a href="index.html">E</a></h1>
+<ul>
+<li><a href="portfolio.html">portfolio</a></li>
+<li><a href="about.html">about</a></li>
+</ul>
+</nav>
+
+
+
+
+
+<div class="content cf">
+
+<h2>Color<br>Theory</h2>
+
+<div class="project-section cf">
+
+<div class="project-info">
+<h3>Color Explorations, Design, and type.</h3>
+<p>The following is an assortment of color studies, graphic, and type explorations. All of these explorations and studies led to a project done on the recreation of the book cover to the novel Dr. Jekyll and Mr. Hyde. These book covers are generated from grids and variations of typographic iterations.</p>
+</div>
+
+<div class="grid cf">
+
+<div class="unit-sizer"></div>
+<div class="gutter-sizer"></div>
+
+<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/1.jpg" 
+title="Image Title">
+<img src="images/CT/1.jpg">
+</a>
+</div>
+
+	<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/2.jpg" 
+title="Image Title">
+<img src="images/CT/2.jpg">
+</a>
+</div>
+
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/g1.jpg" 
+title="Image Title">
+<img src="images/CT/g1.jpg">
+</a>
+</div>
+	
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/g2.jpg" 
+title="Image Title">
+<img src="images/CT/g2.jpg">
+</a>
+</div>
+	
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/g3.jpg" 
+title="Image Title">
+<img src="images/CT/g3.jpg">
+</a>
+</div>
+	
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/g4.jpg" 
+title="Image Title">
+<img src="images/CT/g4.jpg">
+</a>
+</div>
+	
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/g5.jpg" 
+title="Image Title">
+<img src="images/CT/g5.jpg">
+</a>
+</div>
+	
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/5.jpg" 
+title="Image Title">
+<img src="images/CT/5.jpg">
+</a>
+</div>
+	
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/6.jpg" 
+title="Image Title">
+<img src="images/CT/6.jpg">
+</a>
+</div>
+
+		<div class="grid-box">
+<a 
+data-fancybox="photography-1" 
+data-caption="Image caption text"
+href="images/CT/3.jpg" 
+title="Image Title">
+<img src="images/CT/3.jpg">
+</a>
+</div>
+	
+
+</div><!-- end of grid container -->
+</div><!-- end of project section -->
+
+
+</div><!-- end ggmain -->
+	
+</section><!-- end of layout section -->
+
+
+
+
+<!--The Masonry JavaScript plugin is necessary here. I can explain why during class-->
+
+<script>
+
+var elements = document.getElementsByClassName('grid');
+var msnry;
+
+imagesLoaded( document.querySelector('.grid'), function() {
+  var n = elements.length;
+  for(var i = 0; i < n; i++){
+    msnry = new Masonry( elements[i], {
+      itemSelector: '.grid-box',
+      columnWidth: '.unit-sizer',
+      gutter: '.gutter-sizer',
+      percentPosition: false,
+    });
+  }
+});
+
+</script>
+
+
+<script type="text/javascript">
+	$("[data-fancybox]").fancybox({
+		protect: false,
+		transitionDuration : 3000,
+		wheel : false,
+		toolbar : true,
+		buttons : [
+        //'slideShow',
+        //'fullScreen',
+        //'thumbs',
+        //'share',
+        //'download',
+        //'zoom',
+        'close'
+    ],
+	});
+</script>
+
+</body>
+
+
+</html>
